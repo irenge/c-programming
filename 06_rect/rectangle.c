@@ -25,10 +25,8 @@ typedef struct rectangle_t {
 
 rectangle canonicalize(rectangle r) {
   //WRITE THIS FUNCTION
-  int x_temp, y_temp;
   
   if (r.width < 0) {
-    x_temp = r.x;
     r.x += r.width;
     r.width *= -1;
   }
