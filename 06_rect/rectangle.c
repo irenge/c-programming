@@ -29,14 +29,14 @@ rectangle canonicalize(rectangle r) {
   
   if (r.width < 0) {
     x_temp = r.x;
-    r.x = r.x + r.width;
-    r.width = x_temp - r.x;
+    r.x += r.width;
+    r.width *= -1;
   }
 
   if (r.height < 0) {
-    y_temp = r.y;
-    r.y = r.y + r.height;
-    r.height = y_temp - r.y;
+   
+    r.y += r.height;
+    r.height *= -1;
   }
       
   return r;
@@ -44,13 +44,26 @@ rectangle canonicalize(rectangle r) {
 rectangle intersection(rectangle r1, rectangle r2) {
   //WRITE THIS FUNCTION
   rectangle r;
-  r.x = max(r1.x, r2.x);
-  r.y = max(r1.y, r2.y);
+  r1 = canonicalize(r1); 
+  r2 = canonicalize(r2);
 
-  r.width = min(r1.width, r2.width);
-  r.height = min(r1.height, r2.height);
-  
-  return r;
+  //if (((r1.width > r2.width) && (r2.height > r1.height)) || ((r2.width > r1.width) && (r1.height > r2.height)))
+  if(((r1.x + r1.width >= r2.x) && (r2.x + r2.height >= r1.x)) || ((r2.x + r2.width >= r1.x) && (r1.x + r1.height >= r2.x))) {
+    r.x = max(r1.x, r2.x);
+    r.y = max(r1.y, r2.y);
+    // r.width = min(r1.width, r2.width);
+    // r.height = min(r1.height, r2.height);
+    r.width = min(r1.x + r1.width, r2.x + r2.width) - r.x;
+    r.height = min(r1.y + r1.height, r2.y + r2.height) - r.y;
+      
+    return r;
+  } else {
+    r.x = 0;
+    r.y = 0;
+    r.height = 0;
+    r.width = 0;
+    return r;
+  }
 }
 
 //You should not need to modify any code below this line
