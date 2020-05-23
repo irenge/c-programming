@@ -42,7 +42,7 @@ void retirement(int startAge, double initial, retire_info working, retire_info r
   }
 }
 
-void main(){
+int main(){
 
   retire_info works;
   retire_info retirements;
@@ -70,7 +70,7 @@ void main(){
   scanf("%lf", &retirements.contribution);
 
   printf("\nRate of return:");
-  scanf("%f", &retirements.rate_of_return);
+  scanf("%lf", &retirements.rate_of_return);
 
   printf("\nStarting conditions: ");
   printf("\n--------");
@@ -80,7 +80,7 @@ void main(){
   scanf("%lf",&init);
 
   retirement(s_a, init, works, retirements);
-
+  return 0;
 }
 
 
