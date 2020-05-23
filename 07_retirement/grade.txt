@@ -1,13 +1,8 @@
-Grading at Sat May 23 21:03:10 UTC 2020
+Grading at Sat May 23 21:15:35 UTC 2020
 Attempting to compile retirement.c
-retirement.c:45:6: error: return type of ‘main’ is not ‘int’ [-Werror=main]
- void main(){
-      ^
-retirement.c: In function ‘main’:
-retirement.c:73:9: error: format ‘%f’ expects argument of type ‘float *’, but argument 2 has type ‘double *’ [-Werror=format=]
-   scanf("%f", &retirements.rate_of_return);
-         ^
-cc1: all warnings being treated as errors
+retirement.c:85:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
 The code did not compile!
 
 Overall Grade: F
