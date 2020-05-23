@@ -42,14 +42,14 @@ void retirement(int startAge, double initial, retire_info working, retire_info r
   }
 }
 
-int main(){
+/*int main(){
 
   retire_info works;
   retire_info retirements;
   int s_a;
   double init;
 
-
+  
   printf("\nWorking: ");
   printf("\n--------");
   printf("\nMonths: ");
@@ -80,7 +80,24 @@ int main(){
   scanf("%lf",&init);
 
   retirement(s_a, init, works, retirements);
-  return 0;
+  return 0;*/
+
 }
+int main() {
+    retire_info working;
+    working.months = 489;
+    working.contribution = 1000;
+    working.rate_of_return = 0.045 / 12.0;
+
+    retire_info retired;
+    retired.months = 384;
+    retired.contribution = -4000;
+    retired.rate_of_return = 0.01 / 12.0;
+
+    retirement(327, 21345, working, retired);
+
+    return 0;
+  }
+
 
 
