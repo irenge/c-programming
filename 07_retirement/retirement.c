@@ -9,7 +9,7 @@ struct _retire_info {
 
 typedef struct _retire_info retire_info;
 
-
+/*
 int get_months( int total) {
   return ( total % 12);
 }
@@ -42,7 +42,7 @@ void retirement(int startAge, double initial, retire_info working, retire_info r
   }
 }
 
-/*int main(){
+int main(){
 
   retire_info works;
   retire_info retirements;
@@ -83,6 +83,46 @@ void retirement(int startAge, double initial, retire_info working, retire_info r
   return 0;
 
 }*/
+
+
+void print_monthly_info(int months, double balance) {
+  printf("Age %3d month %2d you have $%.2lf\n", months / 12, months % 12, balance);
+
+  return;
+}
+
+double balance_calc(double balance, retire_info retire_stats) {
+  balance += balance * retire_stats.rate_of_return;
+  balance += retire_stats.contribution;
+
+  return balance;
+}
+
+void retirement(int startAge, double initial, retire_info working, retire_info retired) {
+  // Set balance at initial to start
+  double balance = initial;
+  int total_months = startAge - 1;
+
+  for (int i = 0; i < working.months; i++) {
+    total_months += 1;
+    print_monthly_info(total_months, balance);
+    balance = balance_calc(balance, working);
+  }
+
+  for (int j = 0; j < retired.months; j++) {
+    total_months += 1;
+    print_monthly_info(total_months, balance);
+    balance = balance_calc(balance, retired);
+  }
+
+  return;
+}
+
+
+
+
+
+
 int main() {
     retire_info works;
     works.months = 489;
