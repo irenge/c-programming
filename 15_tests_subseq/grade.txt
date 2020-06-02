@@ -1,0 +1,63 @@
+Grading at Tue Jun  2 17:56:47 UTC 2020
+**Testing broken implementation 10 **
+-------------------------------------
+
+Failure on -1, 0, 6,7, 4, 5,9
+
+**Testing broken implementation 11 **
+-------------------------------------
+
+Failure on sequence 1, 2, 1, 3, 5
+
+**Testing broken implementation 1 **
+-------------------------------------
+
+Failure on 6,6,6,6,7
+
+**Testing broken implementation 2 **
+-------------------------------------
+
+Failure on sequence 1, 2, 1, 3, 5
+
+**Testing broken implementation 3 **
+-------------------------------------
+
+Failure  on -7
+
+**Testing broken implementation 4 **
+-------------------------------------
+
+Failure: no array found
+
+**Testing broken implementation 5 **
+-------------------------------------
+
+Failure on sequence 1, 2, 1, 3, 5
+
+**Testing broken implementation 6 **
+-------------------------------------
+
+Failure on sequence 1, 2, 1, 3, 5
+
+**Testing broken implementation 7 **
+-------------------------------------
+
+Failure on sequence 1, 2, 1, 3, 5
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+Failure on sequence 1, 2, 1, 3, 5
+
+**Testing broken implementation 9 **
+-------------------------------------
+
+Failure on sequence 1, 2, 1, 3, 5
+
+**Testing correct implementation **
+-------------------------------------
+
+
+All test programs were handled correctly
+
+Overall Grade: PASSED
