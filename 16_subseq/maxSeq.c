@@ -1,8 +1,11 @@
 #include<stdio.h>
 
 size_t maxSeq(int * array, size_t n) {
-  if(n <= 0)
-    return 0;
+  if(n <= 0) {
+        return 0;
+  } else if(n == 1) {
+    return 1;
+  } else {  
   
   size_t count = 1;
   int i;
@@ -17,5 +20,6 @@ size_t maxSeq(int * array, size_t n) {
     }
     
   }
-  return seq;
+   return seq;
+  }
 }
