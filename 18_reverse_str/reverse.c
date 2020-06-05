@@ -4,7 +4,17 @@
 
 void reverse(char * str) {
   //WRITE ME!
+  int i,j;
+  int len = strlen(str);
+  char less[len];
+  
+  for (i = len -1, j = 0; i>= 0 ; i--,j++ ) 
+    less[j] = str[i]; 
+  for( i = 0 ; i < len ; i++ )
+    str[i] = less[i];
 }
+    
+  
 
 int main(void) {
   char str0[] = "";
