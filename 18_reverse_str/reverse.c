@@ -8,7 +8,7 @@ void reverse(char * str) {
   int len = strlen(str);
   char less[len];
   
-  for (i = len -1, j = 0; i>= 0 ; i--,j++ ) 
+  for (i = len -1, j = 0;j< len ; i--,j++ ) 
     less[j] = str[i]; 
   for( i = 0 ; i < len ; i++ )
     str[i] = less[i];
