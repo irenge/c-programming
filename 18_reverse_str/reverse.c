@@ -26,9 +26,7 @@ void reverse(char * str) {
         str[j]=str[i - 1 - j];
         str[i - 1 - j] = tmpry;
     }
-    for(j = 0; j < i; j++)
-        putchar(str[j]);
-    printf(" \n ");
+ 
 }
     
   
