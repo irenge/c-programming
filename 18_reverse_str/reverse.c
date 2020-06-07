@@ -19,10 +19,14 @@ void reverse(char * str) {
   }
   strd[len] = '\0';
   //str = strd;
-  for(i = 0; i< len; i++)
-     str[i] =strd[i];
-  str[len] = '\0';
-  
+  //for(i = 0; i< len; i++)
+  // str[i] =strd[i];
+  //  str[len] = '\0';
+  //  str = strd;
+
+  memset(str, '\0', sizeof(*str));
+  //strcpy(strd, "This is tutorialspoint.com");
+  strcpy(str, strd);
 }
   
 
