@@ -6,7 +6,7 @@ void reverse(char * str) {
   size_t i, j, len;
 
  len = strlen(str);
- if(len < 1)
+ if(len < 2)
    return;
 
   i = len-1 ;
@@ -32,7 +32,7 @@ int main(void) {
   char str2[] = "abcd";
   char str3[] = "Captain's loj, Stardate 42523.7";
   char str4[] = "Hello, my name is Inijo Montoya.";
-  char str5[] = "You can be my winjman anyday!";
+  char str5[] = "You can be my wingman anyday!";
   char str6[] = "Executor Selendis! Unleash the full power of your forces! There may be no tomorrow!";
   char * array[] = {str0, str1, str2, str3, str4, str5, str6};
   for (int i = 0; i < 7; i++) {
