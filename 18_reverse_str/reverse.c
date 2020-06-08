@@ -3,31 +3,21 @@
 #include <string.h>
 
 void reverse(char * str) {
-  size_t i, j, len;
-
- len = strlen(str);
- if(len < 2)
-   return;
+        size_t i, j, len;
+        char temp;
+len = strlen(str);
+ if(len < 2) {
+         return;
+ }
 
   i = len-1 ;
-  char strd[len];
-  
-  for( j = 0; j < len; j++) {
-   
-    strd[j] = str[i];
+
+  for( j = 0; j < len/2; j++) {
+    temp = str[j];
+    str[j] = str[i];
+    str[i] = temp;
     i--;
   }
-  strd[len] = '\0';
-  //str = strd;
- for(i = 0; i< len; i++)
-  str[i] =strd[i];
-   str[len] = '\0';
-  //  str = strd;
-   /*
-  memset(str, '\0', sizeof(*str));
-
-  strcpy(str, strd);
-   */
 }
   
 
