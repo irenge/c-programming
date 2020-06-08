@@ -5,6 +5,9 @@
 void reverse(char * str) {
         size_t i, j, len;
         char temp;
+if(str == NULL) {
+return;
+}
 len = strlen(str);
  if(len < 2) {
          return;
